@@ -1,6 +1,4 @@
 if (!new URLSearchParams(window.location.search).get('challenge')) {
-  document.getElementById('image1').style.display = 'none';
-  document.getElementById('image2').style.display = 'none';
   window.location.replace("https://qrivgoods.com");
 }
 
@@ -38,13 +36,15 @@ window.onload = function() {
     customText.textContent = customTextPicked;
     images.style.display = 'none';
   }
-  // 1/3 image2
+  // 1/3 image1
   else if (randomNumber(1, 3) === 2) {
+    image1.style.display = 'block';
     customText.style.display = 'none';
     image2.style.display = 'none';
   }
-  // 1/3 image1
+  // 1/3 image2
   else {
+    image2.style.display = 'block';
     customText.style.display = 'none';
     image1.style.display = 'none';
   }
