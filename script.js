@@ -1,31 +1,48 @@
-function getSayfaIcerigi(sayi) {
-  let icerik = '';
+customTextPicked = '';
+customImage1 = '';
+customImage2 = '';
 
-  switch (sayi) {
-    case '1':
-      icerik = '<h1>Sayfa 1</h1><p>Bu sayfa 1. sayfadır.</p>';
-      break;
-    case '2':
-      icerik = '<h1>Sayfa 2</h1><p>Bu sayfa 2. sayfadır.</p>';
-      break;
-    case '3':
-      icerik = '<h1>Sayfa 3</h1><p>Bu sayfa 3. sayfadır.</p>';
-      break;
-    default:
-      icerik = '<h1>Sayfa Bulunamadı</h1><p>Aradığınız sayfa mevcut değil.</p>';
-  }
-
-  return icerik;
+// Random number generator
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// URL'den sayıyı alarak ilgili içeriği gösterir.
-const urlParams = new URLSearchParams(window.location.search);
-const sayi = urlParams.get('challenge');
+// Random content creator
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const challenge = urlParams.get('challenge');
 
-if (sayi) {
-  const icerikDiv = document.getElementById('icerik');
-  icerikDiv.innerHTML = getSayfaIcerigi(sayi);
-} else {
-  const icerikDiv = document.getElementById('icerik');
-  icerikDiv.innerHTML = '<h1>Sayfa Bulunamadı</h1><p>Lütfen geçerli bir sayfa sayısı girin.</p>';
+  const image1 = document.getElementById('image1');
+  const image2 = document.getElementById('image2');
+
+  switch (challenge) {
+    case '1':
+      // Challenge = 1
+      customTextPicked = 'Demo text';
+      image1.src = 'https://via.placeholder.com/500x500?text=Image+13';
+      image2.src = 'https://via.placeholder.com/500x500?text=Image+23';
+      break;
+    default:
+      // Wrong request redirect
+      window.location.replace("https://qrivgoods.com");
+  }
+
+  const customText = document.getElementById('custom-text');
+  const images = document.getElementById('images');
+
+  // 1/3 text
+  if (randomNumber(1, 3) === 1) {
+    customText.textContent = customTextPicked;
+    images.style.display = 'none';
+  }
+  // 1/3 image2
+  else if (randomNumber(1, 3) === 2) {
+    customText.style.display = 'none';
+    image2.style.display = 'none';
+  }
+  // 1/3 image1
+  else {
+    customText.style.display = 'none';
+    image1.style.display = 'none';
+  }
 }
