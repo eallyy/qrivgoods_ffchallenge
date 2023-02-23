@@ -1,3 +1,9 @@
+if (!new URLSearchParams(window.location.search).get('challenge')) {
+  document.getElementById('image1').style.display = 'none';
+  document.getElementById('image2').style.display = 'none';
+  window.location.replace("https://qrivgoods.com");
+}
+
 customTextPicked = '';
 customImage1 = '';
 customImage2 = '';
@@ -22,9 +28,6 @@ window.onload = function() {
       image1.src = 'https://via.placeholder.com/500x500?text=Image+13';
       image2.src = 'https://via.placeholder.com/500x500?text=Image+23';
       break;
-    default:
-      // Wrong request redirect
-      window.location.replace("https://qrivgoods.com");
   }
 
   const customText = document.getElementById('custom-text');
