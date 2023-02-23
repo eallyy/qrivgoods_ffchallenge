@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mobil Uygun Tasarım</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background: rgb(238,174,202);
+            background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+			color: #333;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+			text-align: center;
+			color: #333;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 1rem;
+		}
+
+		@media only screen and (min-width: 768px) {
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 id="yazi"></h1>
+		<div id="resimler">
+			<img id="resim1" src="https://via.placeholder.com/500x500?text=Resim+1" alt="Resim 1">
+			<img id="resim2" src="https://via.placeholder.com/500x500?text=Resim+2" alt="Resim 2">
+		</div>
+	</div>
+
+	<script>
+		// Rastgele sayı oluştur
+		function randomSayi(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		// Sayfa açıldığında rastgele içerik seç
+		window.onload = function() {
+			const yazi = document.getElementById('yazi');
+			const resim1 = document.getElementById('resim1');
+			const resim2 = document.getElementById('resim2');
+			const resimler = document.getElementById('resimler');
+
+			// 1/3 olasılıkla metin göster
+			if (randomSayi(1, 3) === 1) {
+				yazi.textContent = 'Merhaba, burada bir yazı var!';
+				resimler.style.display = 'none';
+			}
+			// 1/3 olasılıkla ilk resmi göster
+			else if (randomSayi(1, 3) === 2) {
+				yazi.style.display = 'none';
+				resim2.style.display = 'none';
+			}
+			// 1/3 olasılıkla ikinci resmi göster
+			else {
+				yazi.style.display = 'none';
+				resim1.style.display = 'none';
+			}
+		}
+	</script>
+</body>
+</html>
