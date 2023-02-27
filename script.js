@@ -46,21 +46,22 @@ window.onload = function() {
   const customText = document.getElementById('custom-text');
   const images = document.getElementById('images');
 
-  // 1/3 text
-  if (randomNumber(1, 3) === 1) {
-    customText.textContent = customTextPicked;
-    images.style.display = 'none';
+  // 2/5 image2
+  if (randomNumber(1, 5) <= 2) {
+    image2.style.display = 'block';
+    customText.style.display = 'none';
+    image1.style.display = 'none';
+    
   }
-  // 1/3 image1
-  else if (randomNumber(1, 3) === 2) {
+  // 2/5 image1
+  else if (randomNumber(1, 5) <= 4) {
     image1.style.display = 'block';
     customText.style.display = 'none';
     image2.style.display = 'none';
   }
-  // 1/3 image2
+  // 1/5 text
   else {
-    image2.style.display = 'block';
-    customText.style.display = 'none';
-    image1.style.display = 'none';
+    customText.textContent = customTextPicked;
+    images.style.display = 'none';
   }
 }
