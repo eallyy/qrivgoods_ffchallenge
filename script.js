@@ -22,22 +22,22 @@ window.onload = function() {
   switch (challenge) {
     case '1':
       // Challenge = 1
-      customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
+      customTextPicked = 'Congratulations. With the discount code <b>N3JYYZW01KRM</b>, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
       image1.src = './contents/1_good.jpg';
       image2.src = './contents/1_bad.jpg';
       break;
     case '2':
-      customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
+      customTextPicked = 'Congratulations. With the discount code <b>N3JYYZW01KRM</b>, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
       image1.src = './contents/2_good.jpg';
       image2.src = './contents/2_bad.jpg';
       break;
     case '3':
-      customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
+      customTextPicked = 'Congratulations. With the discount code <b>N3JYYZW01KRM</b>, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
       image1.src = './contents/3_good.jpg';
       image2.src = './contents/3_bad.jpg';
       break;
     case '4':
-      customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
+      customTextPicked = 'Congratulations. With the discount code <b>N3JYYZW01KRM</b>, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
       image1.src = './contents/4_good.jpg';
       image2.src = './contents/4_bad.jpg';
       break;
