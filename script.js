@@ -21,7 +21,7 @@ window.onload = function() {
 
   switch (challenge) {
     case '1':
-      // Challenge = 1
+      // Challenges
       customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
       image1.src = './contents/1_good.jpg';
       image2.src = './contents/1_bad.jpg';
@@ -36,10 +36,10 @@ window.onload = function() {
       image1.src = './contents/3_good.gif';
       image2.src = './contents/3_bad.gif';
       break;
-    case '4':
+    case '5':
       customTextPicked = 'Congratulations. With the discount code N3JYYZW01KRM, you can purchase Purrfect Print at a fixed price of 30GBP for 24 hours. Click on the logo above to reach the store!';
-      image1.src = './contents/4_good.jpg';
-      image2.src = './contents/4_bad.jpg';
+      image1.src = './contents/5_good.gif';
+      image2.src = './contents/5_bad.gif';
       break;
   }
 
